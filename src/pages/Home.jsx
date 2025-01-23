@@ -1,12 +1,14 @@
 import React from "react";
 
+// import assets from "..assets/assets";
+
 const HomePage = () => {
-  return (
+  return ( 
     <div className="min-h-screen flex flex-col text-white">
       {/* Top Section with Blurred Background */}
-      <div className="relative h-screen bg-[url('https://nitdelhi.ac.in/wp-content/uploads/2024/06/Screenshot-2024-06-01-161400.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex flex-col justify-center items-center">
-          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg">
+      <div className="relative h-screen bg-[url('./assets/background.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 bg-cover h-auto max-w-full bg-fix  flex flex-col justify-center items-center">
+          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg ">
             SENTIENCE
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md">
@@ -14,7 +16,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-
+           
       {/* Events Section */}
       <div className="w-full bg-black py-8 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
