@@ -1,5 +1,5 @@
-// import bg from '../assets/bg.jpg';
+import background from '../assets/background.jpg';
 
-// export default {
-//     bg
-// }
+export default {
+    background
+}

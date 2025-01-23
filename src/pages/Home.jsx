@@ -1,28 +1,22 @@
-import React, { useState, useEffect } from "react";
-// import assets from "../assets/assets";
+import React from "react";
+
+// import assets from "..assets/assets";
+
 const HomePage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setIsVisible(true), 1000); // Adjust delay as needed
-    return () => clearTimeout(timeout);
-  }, []);
-
-  return (
-    <div className=" min-h-screen flex flex-col text-white">
+  return ( 
+    <div className="min-h-screen flex flex-col text-white">
       {/* Top Section with Blurred Background */}
-      <div className="relative h-screen bg-[url('./assets/bg.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black bg-opacity-40  flex flex-col justify-center items-center">
-          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg robotic-text">
-            <span className={`${isVisible ? '' : 'hidden'} animate-slide-in-left`}>S</span>
-            ENTIENCE
+      <div className="relative h-screen bg-[url('./assets/background.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 bg-cover h-auto max-w-full bg-fix  flex flex-col justify-center items-center">
+          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg ">
+            SENTIENCE
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md">
             Discover the future with cutting-edge technology and innovation.
           </p>
         </div>
       </div>
-
+           
       {/* Events Section */}
       <div className="w-full bg-black py-8 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
