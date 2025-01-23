@@ -5,7 +5,7 @@ import Broucher from './components/Broucher'
 import './App.css'
 import Gallery from './components/Gallery'
 import Home from './pages/Home'
-
+import About from './pages/About'
 function App() {
  
   return (
