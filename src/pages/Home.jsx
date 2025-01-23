@@ -1,21 +1,22 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <div className="min-h-screen bg-[url('https://example.com/tech-background.jpg')] bg-cover bg-center flex flex-col items-center text-white">
-      {/* Top Section */}
-      <div className="flex-grow flex flex-col justify-center items-center">
-        <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg text-blue-500">
-          SENTIENCE
-        </h1>
-        <p className="mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md text-gray-300">
-          Discover the future with cutting-edge technology and innovation.
-        </p>
+    <div className="min-h-screen flex flex-col text-white">
+      {/* Top Section with Blurred Background */}
+      <div className="relative h-screen bg-[url('https://nitdelhi.ac.in/wp-content/uploads/2024/06/Screenshot-2024-06-01-161400.png')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex flex-col justify-center items-center">
+          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg">
+            SENTIENCE
+          </h1>
+          <p className="mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md">
+            Discover the future with cutting-edge technology and innovation.
+          </p>
+        </div>
       </div>
 
       {/* Events Section */}
-      <div className="w-full bg-black bg-opacity-60 py-8 px-4">
+      <div className="w-full bg-black py-8 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
           Events
         </h2>
@@ -50,4 +51,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
