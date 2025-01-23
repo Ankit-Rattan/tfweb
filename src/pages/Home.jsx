@@ -1,13 +1,21 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+// import assets from "../assets/assets";
 const HomePage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsVisible(true), 1000); // Adjust delay as needed
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className="min-h-screen flex flex-col text-white">
+    <div className=" min-h-screen flex flex-col text-white">
       {/* Top Section with Blurred Background */}
-      <div className="relative h-screen bg-[url('https://nitdelhi.ac.in/wp-content/uploads/2024/06/Screenshot-2024-06-01-161400.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex flex-col justify-center items-center">
-          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg">
-            SENTIENCE
+      <div className="relative h-screen bg-[url('./assets/bg.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black bg-opacity-40  flex flex-col justify-center items-center">
+          <h1 className="text-6xl md:text-8xl font-extrabold text-center drop-shadow-lg robotic-text">
+            <span className={`${isVisible ? '' : 'hidden'} animate-slide-in-left`}>S</span>
+            ENTIENCE
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md">
             Discover the future with cutting-edge technology and innovation.
@@ -52,3 +60,17 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// Animation styles
+// @keyframes slide-in-left {
+//   from {
+//     transform: translateX(-100%);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
+
+// .animate-slide-in-left {
+//   animation: slide-in-left 0.5s ease-in-out forwards;
+// }
