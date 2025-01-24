@@ -1,5 +1,5 @@
 import React from "react";
-
+import Broucher from "../components/Broucher";
 // import assets from "..assets/assets";
 
 const HomePage = () => {
@@ -49,6 +49,7 @@ const HomePage = () => {
           </a>
         </div>
       </div>
+      <Broucher />
     </div>
   );
 };
