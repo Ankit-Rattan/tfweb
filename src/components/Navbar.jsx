@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 const Navbar = () => {
@@ -7,32 +9,25 @@ const Navbar = () => {
       {/* Navigation Links */}
       <ul className="flex space-x-6 text-lg font-semibold">
         <li>
+          <Link to = "/about" className="hover:text-purple-400 transition-colors duration-300">About</Link></li>
+        <li>
           <a
-            href="#about"
-            className="hover:text-purple-400 transition-colors duration-300"
-          >
-            About
+            href="/"
+            className="hover:text-purple-400 transition-colors duration-300">
+            Home
           </a>
         </li>
         <li>
           <a
-            href="#events"
+            href="#gal"
             className="hover:text-purple-400 transition-colors duration-300"
           >
-            Events
-          </a>
-        </li>
-        <li>
-          <a
-            href="#team"
-            className="hover:text-purple-400 transition-colors duration-300"
-          >
-            Team
+            Gallery
           </a>
         </li>
         <li className="flex items-center space-x-1">
           <a
-            href="Broucher"
+            href="https://drive.google.com/file/d/1dNHFRiU4e4G29sbFle2izJPyqFT7HSkO/view?usp=sharing" target="_blank" rel="noopener noreferrer"
             className="text-pink-400 hover:text-purple-400 transition-colors duration-300"
           >
             Brochure
@@ -41,7 +36,7 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#contact"
+            href="#ft"
             className="hover:text-purple-400 transition-colors duration-300"
           >
             Contact
@@ -60,7 +55,7 @@ const Navbar = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://www.twitter.com"
+          href="https://x.com/NITDofficial"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-purple-400 transition-colors duration-300"
@@ -68,7 +63,7 @@ const Navbar = () => {
           <FaTwitter />
         </a>
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/upvision_nitdelhi"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-purple-400 transition-colors duration-300"
@@ -76,7 +71,7 @@ const Navbar = () => {
           <FaInstagram />
         </a>
         <a
-          href="mailto:example@example.com"
+          href="mailto : techclub@nitdelhi.ac.in"
           className="hover:text-purple-400 transition-colors duration-300"
         >
           <FaEnvelope />
