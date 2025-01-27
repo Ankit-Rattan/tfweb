@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 
@@ -10,9 +10,9 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center bg-black bg-opacity-50 text-white px-8 py-2 rounded-full shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
       {/* Navigation Links */}
-      <ul className="flex space-x-6 text-lg font-semibold">
+      <ul className={`flex space-x-6 text-lg font-semibold ${isMenuOpen ? 'flex-col absolute bg-black bg-opacity-50 top-16 left-1/2 transform -translate-x-1/2 w-full p-4 rounded-lg md:flex-row md:static md:p-0' : 'hidden md:flex'}`}>
         <li>
-          <Link to = "/" className="hover:text-purple-400 transition-colors duration-300">Home</Link>
+          <a href="/" className="hover:text-purple-400 transition-colors duration-300">Home</a>
         </li>
         <li>
           <Link to="/gall" className="hover:text-purple-400 transition-colors duration-300">Gallery</Link>

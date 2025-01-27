@@ -1,12 +1,17 @@
 import React from "react";
 import "../App.css"; // Import the CSS file
+import "../pages/home.css";
+import Broucher from '../components/Brochure';
+import Upcoming from '../components/Upcoming';
 
+import Sponsors from '../components/sponsors';
 const HomePage = () => {
   const handleClick = () => {
     window.open("https://forms.gle/6fHaKbR5r8WjaE2p7", "_blank"); // Replace with your desired link
   };
 
   return (
+    <>
     <div id="hm" className="min-h-screen flex flex-col text-white">
       {/* Top Section with Blurred Background */}
       <div className="relative h-screen bg-[url('./assets/background.jpg')] bg-cover bg-center">
@@ -35,6 +40,29 @@ const HomePage = () => {
       {/* Events Section */}
 
     </div>
+
+      <div className="all">
+      <div className="up  robotic-text ">
+        <h1>Upcoming Events</h1>
+      </div>
+      <div className="upcome">
+      
+      <Upcoming/>
+      </div>
+          <div className="up  robotic-text">
+            <h1>Past Events</h1>
+      </div>
+      <div className="upcome">
+        <Broucher/>
+      </div>
+      <div className="up  robotic-text" >
+        <h1>Our Sponsors</h1>
+      </div>
+        <div className="upcome">
+      <Sponsors/>
+      </div>
+      </div>
+    </>
   );
 };
 
