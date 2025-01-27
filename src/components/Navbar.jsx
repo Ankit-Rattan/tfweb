@@ -1,48 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <nav className="flex justify-between items-center bg-black bg-opacity-50 text-white px-8 py-2 rounded-full shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
       {/* Navigation Links */}
-      <ul className="flex space-x-6 text-lg font-semibold">
-        <li>
-          <Link to = "/about" className="hover:text-purple-400 transition-colors duration-300">About</Link>
-        </li>
-        <li>
-          <a
-            href="#events"
-            className="hover:text-purple-400 transition-colors duration-300"
-          >
-            Events
-          </a>
-        </li>
-        <li>
-          <a
-            href="#team"
-            className="hover:text-purple-400 transition-colors duration-300"
-          >
-            Team
-          </a>
-        </li>
-        <li className="flex items-center space-x-1">
-          <a
-            href="Broucher"
-            className="text-pink-400 hover:text-purple-400 transition-colors duration-300"
-          >
-            Brochure
-          </a>
-          <span className="text-xl">🎉</span>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            className="hover:text-purple-400 transition-colors duration-300"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+      <div className="flex items-center space-x-6 text-lg font-semibold md:flex md:space-x-6">
+        <ul className={`md:flex space-x-6 ${isMenuOpen ? 'flex' : 'hidden'} md:block`}>
+          <li>
+            <Link to="/about" className="hover:text-purple-400 transition-colors duration-300">About</Link>
+          </li>
+          <li>
+            <a href="#events" className="hover:text-purple-400 transition-colors duration-300">Events</a>
+          </li>
+          <li>
+            <a href="#team" className="hover:text-purple-400 transition-colors duration-300">Team</a>
+          </li>
+          <li className="flex items-center space-x-1">
+            <a href="Broucher" className="text-pink-400 hover:text-purple-400 transition-colors duration-300">Brochure</a>
+            <span className="text-xl">🎉</span>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-purple-400 transition-colors duration-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Hamburger Icon */}
+      <button
+        className="md:hidden text-xl"
+        onClick={toggleMenu}
+      >
+        {isMenuOpen ? '✖' : '☰'}
+      </button>
 
       {/* Social Icons */}
       <div className="flex space-x-4 text-xl">
