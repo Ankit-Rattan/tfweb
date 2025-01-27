@@ -41,7 +41,7 @@ const HomePage = () => {
 
     </div>
 
-      <div className="all bg-black">
+      <div className="all  bg-[url('./images/back.jpg')]">
       <div className="up  robotic-text ">
         <h1>Upcoming Events</h1>
       </div>
