@@ -11,7 +11,7 @@
 
 .all{
   background: fixed;
-  background-image: url(./images/back.jpg);
+  background-image: url("https://www.bing.com/images/blob?bcid=SxGpf.gcJggIqxcxoNWLuD9SqbotqVTdPw4");
 }
 
 
@@ -57,7 +57,40 @@
   }
 }
 
+.upcome {
+  border-radius: 3%;
+ background: transparent;
+  position: relative; /* Ensures the position can be animated */
+  height: 80vh; /* Increased height to 50% of the viewport height */
+  width: 64.5vw; /* Dynamic width: 90% of the viewport width */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Hide content that moves out of bounds */
+  background-color: transparent; /* Transparent background */
+  text-align: center;
 
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+  /* box-shadow: 10px 10px 5px rgb(44, 67, 75); */
+}
+
+.upcome img{
+  border-radius: 3%;
+   height: 35rem;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 13rem; */
+}
+
+
+
+.upcome h1 {
+  display: inline-block;
+  position: relative; /* For positioning */
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamic font size */
+  font-weight: bold;
+  color: #28a745; /* Solid green color */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4), 0 0 30px rgba(0, 255, 0, 0.3); /* Shine effect */
+  white-space: nowrap; /* Prevent wrapping */
+}
 
 
 @keyframes moveLeft {
