@@ -39,3 +39,17 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// Animation styles
+// @keyframes slide-in-left {
+//   from {
+//     transform: translateX(-100%);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
+
+// .animate-slide-in-left {
+//   animation: slide-in-left 0.5s ease-in-out forwards;
+// }

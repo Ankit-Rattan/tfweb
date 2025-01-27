@@ -13,9 +13,7 @@ import './App.css'
 import Home from './pages/Home'
 import GallPage from './pages/GallPage'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
 function App() {
- 
   return (
     <>
     <BrowserRouter>
@@ -56,7 +54,8 @@ function App() {
       </BrowserRouter>
 
     </>
-  )
+  );
 }
+
 
 export default App
