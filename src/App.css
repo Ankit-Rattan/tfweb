@@ -1,8 +1,307 @@
 .robotic-text {
   font-family: 'Orbitron', sans-serif;
 }
-* {
+* { 
+  /* background: fixed;
+  background-image: url(./public/images/back.jpg); */
   margin: 0; /* Reset all margins */
   padding: 0; /* Reset all paddings */
   box-sizing: border-box;
 }
+
+.all{
+  background: fixed;
+  background-image: url(./images/back.jpg);
+}
+
+
+.up {
+  position: relative; /* Ensures the position can be animated */
+  width: 100%; /* Full-width for dynamic responsiveness */
+  overflow: hidden; /* Hides content that moves out of bounds */
+  background-color: transparent; /* Transparent background */
+  padding: 10px 20px; /* Reduced vertical padding to decrease height slightly */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+.up h1 {
+  display: inline-block;
+  position: relative; /* For animation */
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamic font size based on viewport width */
+  font-weight: bold;
+  color: #5bc0de; /* Lighter blue color */
+  text-shadow: 0 0 8px rgba(91, 192, 222, 0.6), 0 0 15px rgba(91, 192, 222, 0.4); /* Softer and lighter blue shadow */
+  animation: moveLeft 5s linear infinite; /* Movement animation */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+}
+
+.upcome {
+  border-radius: 3%;
+ background: transparent;
+  position: relative; /* Ensures the position can be animated */
+  height: 80vh; /* Increased height to 50% of the viewport height */
+  width: 64.5vw; /* Dynamic width: 90% of the viewport width */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Hide content that moves out of bounds */
+  background-color: transparent; /* Transparent background */
+  text-align: center;
+
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+  /* box-shadow: 10px 10px 5px rgb(44, 67, 75); */
+}
+
+.upcome img{
+  border-radius: 3%;
+   height: 35rem;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 13rem; */
+}
+
+
+
+.upcome h1 {
+  display: inline-block;
+  position: relative; /* For positioning */
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamic font size */
+  font-weight: bold;
+  color: #28a745; /* Solid green color */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4), 0 0 30px rgba(0, 255, 0, 0.3); /* Shine effect */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@keyframes colorChange {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+}
+
+.circle-text {
+  position: relative;
+  width: 12rem; /* Adjust the circle size */
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem; /* Font size of the text */
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transform: rotate(0deg);
+}
+
+.circle-text::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* From Uiverse.io by SelfMadeSystem */ 
+.frutiger-button {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border-radius: 6px;
+  border: 0;
+  text-shadow: 1px 1px #000a;
+  background: linear-gradient(#006caa, #00c3ff);
+  box-shadow: 0px 4px 6px 0px #0008;
+  transition: 0.3s all;
+}
+
+.frutiger-button:hover {
+  box-shadow: 0px 6px 12px 0px #0009;
+}
+
+.frutiger-button:active {
+  box-shadow: 0px 0px 0px 0px #0000;
+}
+
+.inner {
+  position: relative;
+  inset: 0px;
+  padding: 1em;
+  border-radius: 4px;
+  background: radial-gradient(circle at 50% 100%, #30f8f8 10%, #30f8f800 55%),
+    linear-gradient(#00526a, #009dcd);
+  overflow: hidden;
+  transition: inherit;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-65deg, #0000 40%, #fff7 50%, #0000 70%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: thing 3s ease infinite;
+}
+
+@keyframes thing {
+  0% {
+    background-position: 130%;
+    opacity: 1;
+  }
+
+  to {
+    background-position: -166%;
+    opacity: 0;
+  }
+}
+
+.top-white {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0 -8em;
+  background: radial-gradient(
+    circle at 50% -270%,
+    #fff 45%,
+    #fff6 60%,
+    #fff0 60%
+  );
+  transition: inherit;
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: inherit;
+  box-shadow: inset 0px 2px 8px -2px #0000;
+}
+
+.frutiger-button:active .inner::after {
+  box-shadow: inset 0px 2px 8px -2px #000a;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 550;
+  transition: inherit;
+}   
+
+.frutiger-button{
+  margin-top: 1rem;
+}
+/* .inner{
+  border-radius: 5%;
+} */
+
+.glow-text {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+  }
+}
+
+.rob robotic-text {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  /* width: 0; */
+  animation: typing 3s steps(10) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sen {
+  animation: float 3s ease-in-out infinite;
+  
+}
+
+
+  .vertical-text {
+    writing-mode: vertical-lr;  /* Text will be written vertically from bottom to top */
+    transform: rotate(180deg);
+    text-align: center;
+}
+

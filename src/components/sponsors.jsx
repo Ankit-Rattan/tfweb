@@ -14,15 +14,13 @@ const Broucher = () => {
       spaceBetween={50}
       slidesPerView={1}
     >
-      <SwiperSlide>
-        <img src="/images/1.jpg" alt="Image 1" />
+      <SwiperSlide >
+        <img src="/images/10.jpg" alt="Image 1" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="/images/2.jpg" alt="Image 2" />
+        <img src="/images/11.jpg" alt="Image 2" />
       </SwiperSlide>
-      <SwiperSlide>
-        <img src="/images/3.jpg" alt="Image 3" />
-      </SwiperSlide>
+     
     </Swiper>
   );
 };

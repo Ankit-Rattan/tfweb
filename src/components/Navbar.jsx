@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState }from "react";
+import { Link } from "react-router-dom";
 import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,33 +10,33 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center bg-black bg-opacity-50 text-white px-8 py-2 rounded-full shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
       {/* Navigation Links */}
-      <div className="flex items-center space-x-6 text-lg font-semibold md:flex md:space-x-6">
-        <ul className={`md:flex space-x-6 ${isMenuOpen ? 'flex' : 'hidden'} md:block`}>
-          <li>
-            <Link to="/about" className="hover:text-purple-400 transition-colors duration-300">About</Link>
-          </li>
-          <li>
-            <a href="#events" className="hover:text-purple-400 transition-colors duration-300">Events</a>
-          </li>
-          <li>
-            <a href="#team" className="hover:text-purple-400 transition-colors duration-300">Team</a>
-          </li>
-          <li className="flex items-center space-x-1">
-            <a href="Broucher" className="text-pink-400 hover:text-purple-400 transition-colors duration-300">Brochure</a>
-            <span className="text-xl">🎉</span>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-purple-400 transition-colors duration-300">Contact</a>
-          </li>
-        </ul>
-      </div>
+      <ul className="flex space-x-6 text-lg font-semibold">
+        <li>
+          <Link to = "/" className="hover:text-purple-400 transition-colors duration-300">Home</Link>
+        </li>
+        <li>
+          <Link to="/gall" className="hover:text-purple-400 transition-colors duration-300">Gallery</Link>
+        </li>
+        <li className="flex items-center space-x-1">
+          <a
+            href="https://drive.google.com/file/d/1dNHFRiU4e4G29sbFle2izJPyqFT7HSkO/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            className="text-pink-400 hover:text-purple-400 transition-colors duration-300"
+          >
+            Brochure
+          </a>
+          <span className="text-xl">🎉</span>
+        </li>
+        <li>
+          <a href="/#ft" className="hover:text-purple-400 transition-colors duration-300">Contact</a>
+        </li>
+        <li>
+          <Link to="/about" className="hover:text-purple-400 transition-colors duration-300">About</Link>
+        </li>
+      </ul>
 
-      {/* Hamburger Icon */}
-      <button
-        className="md:hidden text-xl"
-        onClick={toggleMenu}
-      >
-        {isMenuOpen ? '✖' : '☰'}
+      {/* Menu Button for small screens */}
+      <button onClick={toggleMenu} className="md:hidden text-3xl">
+        {isMenuOpen ? '×' : '≡'}
       </button>
 
       {/* Social Icons */}
@@ -50,7 +50,7 @@ const Navbar = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://www.twitter.com"
+          href="https://x.com/NITDofficial"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-purple-400 transition-colors duration-300"
@@ -58,7 +58,7 @@ const Navbar = () => {
           <FaTwitter />
         </a>
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/upvision_nitdelhi"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-purple-400 transition-colors duration-300"
@@ -66,7 +66,7 @@ const Navbar = () => {
           <FaInstagram />
         </a>
         <a
-          href="mailto:example@example.com"
+          href="mailto:techclub@nitdelhi.ac.in"
           className="hover:text-purple-400 transition-colors duration-300"
         >
           <FaEnvelope />

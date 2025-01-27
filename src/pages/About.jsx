@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative bg-cover bg-center min-h-screen w-full pt-20 mt-16 mb-16 text-green-600"
+      className="relative bg-cover bg-center min-h-screen w-full mt-16 mb-16 text-green-600"
       style={{
         backgroundImage: "url('https://nitd.almabay.in/wp-content/uploads/2023/03/NIT-Delhi.jpg')",
         backgroundSize: "cover",
@@ -14,10 +14,10 @@ const About = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-opacity-60"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start px-6 sm:px-10 text-white min-h-full">
+      <div className="relative z-10 pt-20 flex flex-col items-center justify-start px-6 sm:px-10 text-white min-h-full bg-[rgb(0,0,0,0.5)]">
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold  mb-6 sm:mb-8 text-center text-green-500">
           About Us
         </h1>

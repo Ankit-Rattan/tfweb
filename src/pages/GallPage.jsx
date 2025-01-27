@@ -63,7 +63,11 @@ const GallPage = () => {
                                 backgroundSize: "400% 100%"
                             }}
                         >
-                          
+                          <div className="remove">
+                            <p className="mb-[120%] absolute bottom-0 left-1/2 transform -translate-x-1/2 text-4xl opacity-[30%] text-white robotic-text">
+                                {event.name}
+                            </p>
+                        </div>
                             <div className="overlay">
                                 <p className="event-name">{event.name}</p>
                                 <p className="event-description">{event.description}</p>

@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-7xl {
+    font-size: 4.5rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Event Section Styles */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.event-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 800px; /* Increased height */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.event-card:hover .overlay {
+    opacity: 1;
+}
+
+.event-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #ddd;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Vertical Text */
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    margin-top: 4vw; /* Adjust this value based on your navbar height */
+}
+
+/* When the screen width is small (e.g., less than 768px), make the text horizontal */
+@media (max-width: 768px) {
+    .vertical-text {
+        writing-mode: unset;
+        transform: unset;
+        text-align: left;
+        margin-top: 4rem; /* Adjust this value to add spacing between navbar and text */
+    }
+}
+

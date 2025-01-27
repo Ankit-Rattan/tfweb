@@ -1,0 +1,92 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    /* display: none; */
+}
+
+/* Hover and Group Styling */
+.group:hover h1,
+.group:hover p {
+    display: block;
+}
+
+.hover\:scale-110:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.transition-transform {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Vertical Text for "Gallery" */
+.vertical-text {
+    writing-mode: vertical-lr;  /* Text will be written vertically from bottom to top */
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+/* Event Name Styling (Vertical Initially) */
+.group p.vertical-text {
+    position: absolute;
+    bottom: 0;  /* Aligns it to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+/* Event Name Styling (Horizontal on Hover) */
+.group h1 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+/* Event Description Styling */
+.group p {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+/* Scaling and Transition Effects */
+.group {
+    position: relative;
+    overflow: hidden;
+    cursor:  pointer;
+}
+
+.group:hover {
+    z-index: 2;
+}
+.remove :hover{
+    display: none;
+}
