@@ -1,0 +1,45 @@
+/* Style for Swiper container */
+.swiper {
+    width: 100%;
+    height: auto; /* Allow swiper to adapt to content height */
+  }
+  
+  /* Swiper slide container */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Images inside the slides */
+  .image-slide  {
+    width: 1000px; /* Maintain original width */
+    max-height: 900px; /* Limit height to prevent excessive size (adjustable) */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    object-fit: contain; /* Ensures the image doesn't stretch */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+    transition: transform 0.3s ease; /* Smooth scaling on resize */
+  }
+  
+  /* When the screen size is smaller than 1024px */
+  @media (max-width: 1024px) {
+    .image-slide img {
+      max-height: 400px; /* Decrease max height for smaller devices */
+    }
+  }
+  
+  /* When the screen size is smaller than 768px */
+  @media (max-width: 768px) {
+    .image-slide img {
+      max-height: 300px; /* Further decrease max height for smaller screens */
+    }
+  }
+  
+  /* When the screen size is smaller than 480px */
+  @media (max-width: 480px) {
+    .image-slide img {
+      max-height: 200px; /* Smallest height for mobile devices */
+    }
+  }
+  

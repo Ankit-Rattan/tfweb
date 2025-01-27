@@ -16,7 +16,6 @@
 
 
 .up {
-
   position: relative; /* Ensures the position can be animated */
   width: 100%; /* Full-width for dynamic responsiveness */
   overflow: hidden; /* Hides content that moves out of bounds */
@@ -27,19 +26,18 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
 }
 
-
 .up h1 {
   display: inline-block;
   position: relative; /* For animation */
   font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamic font size based on viewport width */
   font-weight: bold;
-  background: linear-gradient(to right, #f12711, #f5af19, #12c2e9);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: moveLeft 5s linear infinite, colorChange 8s ease-in-out infinite;
+  color: #5bc0de; /* Lighter blue color */
+  text-shadow: 0 0 8px rgba(91, 192, 222, 0.6), 0 0 15px rgba(91, 192, 222, 0.4); /* Softer and lighter blue shadow */
+  animation: moveLeft 5s linear infinite; /* Movement animation */
   white-space: nowrap; /* Prevent wrapping */
 }
+
+
 
 @keyframes moveLeft {
   0% {
@@ -86,16 +84,14 @@
 
 .upcome h1 {
   display: inline-block;
-  position: relative; /* For animation */
+  position: relative; /* For positioning */
   font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamic font size */
   font-weight: bold;
-  background: linear-gradient(to right, #f12711, #f5af19, #12c2e9); /* Gradient text */
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: moveLeft 5s linear infinite, colorChange 8s ease-in-out infinite;
+  color: #28a745; /* Solid green color */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4), 0 0 30px rgba(0, 255, 0, 0.3); /* Shine effect */
   white-space: nowrap; /* Prevent wrapping */
 }
+
 
 @keyframes moveLeft {
   0% {
@@ -105,6 +101,7 @@
     transform: translateX(-100%);
   }
 }
+
 
 @keyframes colorChange {
   0%, 100% {
@@ -246,3 +243,65 @@
 /* .inner{
   border-radius: 5%;
 } */
+
+.glow-text {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+  }
+}
+
+.rob robotic-text {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  /* width: 0; */
+  animation: typing 3s steps(10) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sen {
+  animation: float 3s ease-in-out infinite;
+  
+}
+
+
+  .vertical-text {
+    writing-mode: vertical-lr;  /* Text will be written vertically from bottom to top */
+    transform: rotate(180deg);
+    text-align: center;
+}
+
