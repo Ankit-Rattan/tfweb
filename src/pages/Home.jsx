@@ -10,7 +10,7 @@ const HomePage = () => {
     <div id="hm" className="min-h-screen flex flex-col text-white">
       {/* Top Section with Blurred Background */}
       <div className="relative h-screen bg-[url('./assets/background.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+        <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center text-center">
           <img
             src="/images/Robot1.gif"
             alt="UpVision Logo"
@@ -39,17 +39,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-// Animation styles
-// @keyframes slide-in-left {
-//   from {
-//     transform: translateX(-100%);
-//   }
-//   to {
-//     transform: translateX(0);
-//   }
-// }
-
-// .animate-slide-in-left {
-//   animation: slide-in-left 0.5s ease-in-out forwards;
-// }

@@ -30,6 +30,12 @@ const Footer = () => {
           </div>
           <p>
             <a href="mailto:techclub@nitdelhi.ac.in">techclub@nitdelhi.ac.in</a>
+            <div className='flex flex-row gap-2 mt-1'>
+
+            <p>Developed By :</p>
+            <p>Sumit Kumar | </p>
+            <p>Vashu Kumar</p>
+            </div>
           </p>
         </div>
 
