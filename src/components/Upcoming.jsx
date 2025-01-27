@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-const Broucher = () => {
+const Upcoming = () => {
   return (
     <Swiper
       modules={[Autoplay]}
@@ -34,4 +34,4 @@ const Broucher = () => {
   );
 };
 
-export default Broucher;
+export default Upcoming;
