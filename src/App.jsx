@@ -19,7 +19,7 @@ function App() {
           <Route path="/gall" element={<GallPage />} />
           <Route path="/" element={<Home />} />
         </Routes>
-        <div className="all">
+        <div className="all bg-black">
       <Footer/>
       </div>
       </BrowserRouter>
