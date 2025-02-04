@@ -6,7 +6,7 @@ const GallPage = () => {
 
     const events = [
       { 
-          name: "SOLOANA", 
+          name: "SOLANA", 
           description: "Discover the limitless potential of the Solana blockchain. Build decentralized applications that transform industries. Dive into cutting-edge blockchain technology." 
       },
       { 
@@ -14,7 +14,7 @@ const GallPage = () => {
           description: "Participate in a thrilling 12-hour hackathon for innovators. Solve challenging problems and showcase your skills. Collaborate, create, and win exciting rewards." 
       },
       { 
-          name: "TECH ODESSEY", 
+          name: "TECH ODYSSEY", 
           description: "Experience a captivating journey through modern technology. Learn about trends shaping the tech landscape. Interact with experts and explore new ideas." 
       },
       { 

@@ -50,7 +50,7 @@ const Navbar = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://x.com/NITDofficial"
+          href="https://x.com/techclub_nitd?t=03mJglaAbPuMfie-a8CTjA&s=09"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-purple-400 transition-colors duration-300"
