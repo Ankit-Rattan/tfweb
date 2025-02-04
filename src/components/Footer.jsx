@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'; // Ensure to create this CSS file for styling.
+import './footer.css'; // Ensure to create this CSS file for styling.
 import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
@@ -30,11 +30,11 @@ const Footer = () => {
           </div>
           <p>
             <a href="mailto:techclub@nitdelhi.ac.in">techclub@nitdelhi.ac.in</a>
-            <div className='flex flex-row gap-2 mt-1'>
+            <div className=' mt-1 '>
 
             <p>Developed By :</p>
-            <p>Sumit Kumar | </p>
-            <p>Vashu Kumar</p>
+            <br/>
+            <p className='mt-[-20px]'>Sumit Kumar | Vashu Kumar </p>
             </div>
           </p>
         </div>
