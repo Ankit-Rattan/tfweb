@@ -24,17 +24,17 @@ const Footer = () => {
             <a href="https://www.linkedin.com/company/upvision-nitd" target="_blank" rel="noopener noreferrer">
               <FaLinkedin/>
             </a>
-            <a href="https://x.com/NITDofficial" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/techclub_nitd?t=03mJglaAbPuMfie-a8CTjA&s=09" target="_blank" rel="noopener noreferrer">
               <FaTwitter/>
             </a>
           </div>
           <p>
             <a href="mailto:techclub@nitdelhi.ac.in">techclub@nitdelhi.ac.in</a>
-            <div className='flex flex-row gap-2 mt-1'>
+            <div className=' mt-1 '>
 
             <p>Developed By :</p>
-            <p>Sumit Kumar | </p>
-            <p>Vashu Kumar</p>
+            <br/>
+            <p className='mt-[-20px]'>Sumit Kumar | Vashu Kumar </p>
             </div>
           </p>
         </div>

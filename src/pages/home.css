@@ -1,16 +1,13 @@
-.upcome {
+/*.upcome {
     border-radius: 3%;
    background: transparent;
-    position: relative; /* Ensures the position can be animated */
-    height: 80vh; /* Increased height to 50% of the viewport height */
-    width: 64.5vw; /* Dynamic width: 90% of the viewport width */
-    margin: 0 auto; /* Center the container horizontally */
-    overflow: hidden; /* Hide content that moves out of bounds */
-    background-color: transparent; /* Transparent background */
+    position: relative; 
+    height: 80vh;
+    width: 64.5vw; 
+    margin: 0 auto; 
+    overflow: hidden;
+    background-color: transparent;
     text-align: center;
-    
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
-    /* box-shadow: 10px 10px 5px rgb(44, 67, 75); */
   }
   
   .upcome img{
@@ -18,21 +15,138 @@
      height: 35rem;
       display: flex;
       justify-content: center;
-      /* margin-left: 13rem; */
   }
   
   
   
   .upcome h1 {
     display: inline-block;
-    position: relative; /* For positioning */
-    font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamic font size */
+    position: relative;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: bold;
-    color: #28a745; /* Solid green color */
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4), 0 0 30px rgba(0, 255, 0, 0.3); /* Shine effect */
-    white-space: nowrap; /* Prevent wrapping */
+    color: #28a745;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4), 0 0 30px rgba(0, 255, 0, 0.3);
+    white-space: nowrap; 
   }
   /* .all{
     background: fixed;
     background-image: url(./images/back.jpg);
-  } */
+  }*/
+
+  .upcome {
+    border-radius: 3%;
+    background: transparent;
+    position: relative;
+    height: auto; 
+    width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.upcome img {
+    border-radius: 3%;
+    max-width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+.upcome h1 {
+    display: inline-block;
+    position: relative;
+    font-size: clamp(1.5rem, 5vw, 3rem); 
+    font-weight: bold;
+    color: #28a745;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 
+                 0 0 20px rgba(0, 255, 0, 0.4), 
+                 0 0 30px rgba(0, 255, 0, 0.3); 
+    white-space: nowrap;
+}
+/* .all {
+    background: url(./images/back.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; 
+    padding: 2rem; 
+} */
+
+@media (max-width: 1024px) {
+    .upcome {
+        height: auto;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .upcome {
+        width: 95vw; 
+        height: auto;
+        padding: 1rem;
+    }
+
+    .upcome h1 {
+        font-size: clamp(1.2rem, 4vw, 2rem); 
+    }
+}
+
+@media (max-width: 480px) {
+    .upcome {
+        width: 100%;
+        height: auto;
+    }
+
+    .upcome img {
+        height: auto; 
+        max-width: 100%;
+    }
+
+    .all {
+        padding: 1rem; 
+    }
+}
+/* Ensure headings and text scale well on different screens */
+.up h1, .upcome h1 {
+  font-size: clamp(1.5rem, 6vw, 3rem); /* More responsive */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.upcome p {
+  font-size: clamp(1rem, 4vw, 1.5rem); /* Adjust paragraph text */
+}
+
+/* Adjust text size for smaller screens */
+@media (max-width: 768px) {
+  .up h1, .upcome h1 {
+      font-size: clamp(1.2rem, 5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .up h1, .upcome h1 {
+      font-size: clamp(1rem, 4vw, 2rem);
+  }
+
+  .upcome p {
+      font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  }
+}
+.sen {
+  font-size: clamp(2rem, 10vw, 8rem); /* Scales dynamically */
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.4);
+}
+.sen + p { /* Targets the paragraph right after .sen */
+  font-size: clamp(1rem, 4vw, 3rem); /* Dynamically scales */
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.4);
+  max-width: 90%; /* Ensures better spacing on smaller screens */
+  margin: 0 auto; /* Keeps it centered */
+}

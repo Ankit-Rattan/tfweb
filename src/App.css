@@ -12,7 +12,10 @@
 .all{
   background: fixed;
   background-image: url("https://github.com/Ankit-Rattan/tfweb/blob/main/public/images/back.jpg?raw=true");
-  background-color: black;
+  background-size: cover;
+  background-attachment: fixed; 
+  padding: 2rem; 
+
 }
 
 

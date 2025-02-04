@@ -23,17 +23,9 @@ const Broucher = () => {
       <SwiperSlide className = "imgage">
         <img src="/images/3.jpg" alt="Image 3" />
       </SwiperSlide>
-      {/* <SwiperSlide className = "imgage">
-        <img src="/images/7.jpg" alt="Image 3" />
-      </SwiperSlide >
-      <SwiperSlide className='images'>
-        <img src="/images/8.jpg" alt="Image 3" />
-      </SwiperSlide>
-      <SwiperSlide className = "imgage">
-        <img src="/images/9.jpg" alt="Image 3" />
-      </SwiperSlide> */}
     </Swiper>
   );
 };
 
 export default Broucher;//manage its responsiveness to decrease the size of images maintaining the side ratios 
+

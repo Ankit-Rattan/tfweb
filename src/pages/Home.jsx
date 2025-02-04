@@ -1,10 +1,10 @@
 import React from "react";
 import "../App.css"; // Import the CSS file
 import "../pages/home.css";
-import Broucher from '../components/Brochure';
-import Upcoming from '../components/Upcoming';
+import Broucher from "../components/Brochure";
+import Upcoming from "../components/Upcoming";
 
-import Sponsors from '../components/sponsors';
+import Sponsors from "../components/sponsors";
 const HomePage = () => {
   const handleClick = () => {
     window.open("https://forms.gle/6fHaKbR5r8WjaE2p7", "_blank"); // Replace with your desired link
@@ -24,8 +24,8 @@ const HomePage = () => {
             <h1 className="sen text-6xl md:text-8xl font-bold text-center drop-shadow-lg robotic-text">
               SENTIENCE
             </h1>
-            <p className="mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md">
-              Discover the future with cutting-edge technology and innovation.
+            <p className=" mt-4 text-xl md:text-2xl text-center max-w-2xl drop-shadow-md robotic-text">
+              2025
             </p>
 
             <button onClick={handleClick} className="frutiger-button">
@@ -38,15 +38,13 @@ const HomePage = () => {
         </div>
 
         {/* Events Section */}
-
       </div>
 
-      <div className="all bg-black bg-black">
+      <div className="all">
         <div className="up  robotic-text ">
           <h1>Upcoming Events</h1>
         </div>
         <div className="upcome">
-
           <Upcoming />
         </div>
         <div className="up  robotic-text">
@@ -55,7 +53,7 @@ const HomePage = () => {
         <div className="upcome">
           <Broucher />
         </div>
-        <div className="up  robotic-text" >
+        <div className="up  robotic-text">
           <h1>Our Sponsors</h1>
         </div>
         <div className="upcome">
